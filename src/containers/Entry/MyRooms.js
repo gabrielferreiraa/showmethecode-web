@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import global from 'config/global';
-import { Icon, Guests } from 'components';
+import { Icon, Guests, Title, Tooltip } from 'components';
 
 const List = styled.ul`
   list-style-type: none;
@@ -53,27 +53,56 @@ const WrapperGuestsEntry = styled.div`
   align-items: center;
 `;
 
+const TitleWithIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+  ${Title} {
+    margin-right: 10px;
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: ${global.colors.darkColor};
+  }
+`;
+
 export default function MyRooms({ rooms }) {
-    return rooms.length > 0 && (
-        <List>
-            {rooms.map(room => (
-                <Item key={room.code}>
-                    <Room>
-                        <div>
-                            <RoomCodeText>Room Code</RoomCodeText>
-                            <RoomCode>{room.code}</RoomCode>
-                        </div>
-                        <WrapperGuestsEntry>
-                            <Guests data={room.users} />
-                            <EntryLink>
-                                <Icon icon="LogInCircle" title={`Enter room "${room.code}"`} />
-                            </EntryLink>
-                        </WrapperGuestsEntry>
-                    </Room>
-                    <Owner>owner: {room.owner.name}</Owner>
-                </Item>
-            ))}
-        </List>
+    return (
+        <>
+            <TitleWithIcon>
+                <Title align="right">
+                    Your rooms
+                </Title>
+                <Tooltip content="Rooms you created or joined">
+                    <Icon icon="InfoCircle" />
+                </Tooltip>
+            </TitleWithIcon>
+            {rooms.length > 0 && (
+                <List>
+                    {rooms.map(room => (
+                        <Item key={room.code}>
+                            <Room>
+                                <div>
+                                    <RoomCodeText>Room Code</RoomCodeText>
+                                    <RoomCode>{room.code}</RoomCode>
+                                </div>
+                                <WrapperGuestsEntry>
+                                    <Guests data={room.users} />
+                                    <EntryLink>
+                                        <Icon icon="LogInCircle" title={`Enter room "${room.code}"`} />
+                                    </EntryLink>
+                                </WrapperGuestsEntry>
+                            </Room>
+                            <Owner>owner: {room.owner.name}</Owner>
+                        </Item>
+                    ))}
+                </List>
+            )}
+        </>
     )
 };
 

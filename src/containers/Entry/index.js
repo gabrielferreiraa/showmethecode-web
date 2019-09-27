@@ -1,3 +1,6 @@
+import { Row, Col } from 'react-grid-system';
+import ReactTooltip from 'react-tooltip';
+import styled from 'styled-components';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { Avatar } from 'components';
@@ -11,6 +14,11 @@ import MyRooms from "./MyRooms";
 import CreateRoom from "./CreateRoom";
 import EnterRoom from "./EnterRoom";
 
+const StyledAvatar = styled(Avatar)`
+  display: block;
+  margin: 15px auto;
+`;
+
 export default function Entry () {
     const dispatch = useDispatch();
     useEffect(() => {
@@ -23,18 +31,23 @@ export default function Entry () {
     }));
 
     return (
-        <>
-            <div>
-                <Avatar src={user.avatar} alt={user.name} />
+        <Row>
+            <Col sm={12}>
+                <StyledAvatar src={user.avatar} alt={user.name} />
                 <Welcome>Hi, {user.name}</Welcome>
-            </div>
-            <div>
-                <MyRooms rooms={myRooms} />
-                <div>
-                    <EnterRoom />
-                    <CreateRoom />
-                </div>
-            </div>
-        </>
+            </Col>
+            <Col sm={12}>
+                <Row>
+                    <Col sm={6}>
+                        <MyRooms rooms={myRooms} />
+                    </Col>
+                    <Col sm={6}>
+                        <EnterRoom />
+                        <CreateRoom />
+                    </Col>
+                </Row>
+            </Col>
+            <ReactTooltip place="top" type="dark" effect="solid" />
+        </Row>
     )
 };

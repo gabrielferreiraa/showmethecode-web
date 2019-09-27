@@ -15,7 +15,7 @@ const PrivateRoutes = () => (
 
 const Routes = () => {
     const user = useSelector(({ user: { data } }) => data);
-console.log(user);
+
     return (
         <Switch>
             <Route path="/" exact component={Login}/>
