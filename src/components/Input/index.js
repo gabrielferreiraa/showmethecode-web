@@ -22,22 +22,24 @@ const Label = styled.label`
   margin-bottom: 3px;
 `;
 
-const Input = ({ value, name, id, type, label, ...rest }) => (
-    <div>
-        {!!label && (
-            <Label htmlFor={id}>
-                {label}
-            </Label>
-        )}
-        <StyledInput
-            type={type}
-            value={value}
-            name={name}
-            id={id}
-            {...rest}
-        />
-    </div>
-);
+export default function Input ({ value, name, id, type, label, ...rest }) {
+    return (
+        <div>
+            {!!label && (
+                <Label htmlFor={id}>
+                    {label}
+                </Label>
+            )}
+            <StyledInput
+                type={type}
+                value={value}
+                name={name}
+                id={id}
+                {...rest}
+            />
+        </div>
+    )
+};
 
 Input.defaultProps = {
     value: '',
@@ -52,5 +54,3 @@ Input.propTypes = {
     name: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
 };
-
-export default Input;

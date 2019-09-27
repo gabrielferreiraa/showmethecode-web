@@ -1,0 +1,38 @@
+---
+name: Guests
+route: /components/guests
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import Guests from './index'
+
+# Guests
+
+<Props of={Guests} />
+
+## Basic usage
+
+<Playground>
+  {() => {
+    const data = [
+      {
+        name: 'Gabriel Ferreira',
+        avatar: 'https://avatars1.githubusercontent.com/u/17201177?s=460&v=4',
+        _id: '1'
+      },
+      {
+        name: 'Silvio Santos',
+        avatar: 'https://static.sbt.com.br/media/playlist/20100419153609/20150209162622/tn/20190405173603.jpg',
+        _id: '2'
+      },
+      {
+        name: 'Faustão',
+        avatar: 'https://cdn-ofuxico.akamaized.net/img/upload/noticias/2019/04/30/faustao_reproducao_tv_globo_348281_36.jpg',
+       _id: '3'
+      }
+    ];
+
+    return <Guests data={data} />
+  }}
+</Playground>

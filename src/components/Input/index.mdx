@@ -1,0 +1,43 @@
+---
+name: Input
+route: /components/input
+menu: Components
+---
+
+import { useState } from 'react';
+import { Playground, Props } from 'docz'
+import Input from './index'
+
+# Input
+
+<Props of={Input} />
+
+## Basic usage
+
+<Playground>
+    {() => {
+        const [value, setValue] = useState('');
+
+        return <Input label="Your name" name="name" value={value} onChange={({ target }) => setValue(target.value)} />;
+    }}
+</Playground>
+
+## Without Label
+
+<Playground>
+    {() => {
+        const [value, setValue] = useState('');
+
+        return <Input name="name" value={value} onChange={({ target }) => setValue(target.value)} />;
+    }}
+</Playground>
+
+## Extra params
+
+<Playground>
+    {() => {
+        const [value, setValue] = useState('');
+
+        return <Input name="name" placeholder="Your name (extra param)" type="number" label="Your name" value={value} onChange={({ target }) => setValue(target.value)} />;
+    }}
+</Playground>

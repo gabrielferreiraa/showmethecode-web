@@ -1,0 +1,22 @@
+---
+name: Tooltip
+route: /components/tooltip
+menu: Components
+---
+
+import ReactTooltip from 'react-tooltip';
+import { Playground, Props } from 'docz'
+import Tooltip from './index'
+
+# Tooltip
+
+<Props of={Tooltip} />
+
+## Basic usage
+
+<Playground>
+    <Tooltip content="Hi, I'm a Tooltip!">
+        <button>hover me :D</button>
+    </Tooltip>
+    <ReactTooltip place="top" type="dark" effect="solid" />
+</Playground>

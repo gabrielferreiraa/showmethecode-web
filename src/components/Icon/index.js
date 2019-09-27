@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as logo from 'styled-icons/boxicons-logos';
 import * as icons from 'styled-icons/boxicons-regular';
 
-const Icon = ({ icon, size, title, isLogo }) => {
+export default function Icon({ icon, size, title, isLogo }) {
     const IconComponent = isLogo
         ? logo[icon]
         : icons[icon];
@@ -25,5 +25,3 @@ Icon.propTypes = {
     title: PropTypes.string,
     isLogo: PropTypes.bool,
 };
-
-export default Icon;

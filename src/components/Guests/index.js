@@ -10,6 +10,7 @@ const GuestAvatar = styled.img`
   border-radius: 50%;
   transform: translateX(${({ countSpace }) => countSpace * 10}px);
   border: 1px dashed ${global.colors.darkColor};
+  object-fit: cover;
 `;
 
 const List = styled.ul`

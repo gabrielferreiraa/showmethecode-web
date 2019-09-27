@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "NODE_PATH=src react-scripts test",
     "test:cov": "yarn test --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docz:dev": "NODE_PATH=src docz dev"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -55,6 +56,8 @@
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.1.3",
     "chai": "^4.2.0",
+    "docz": "^1.3.2",
+    "docz-theme-default": "^1.2.0",
     "prop-types": "^15.7.2",
     "redux-saga-test-plan": "^4.0.0-rc.1"
   }

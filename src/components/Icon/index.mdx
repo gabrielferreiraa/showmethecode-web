@@ -1,0 +1,28 @@
+---
+name: Icon
+route: /components/icon
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import Icon from './index'
+
+# Icon
+
+<Props of={Icon} />
+
+## Normal
+
+<Playground>
+  <Icon title="Happy Face" icon="HappyAlt" />
+  <Icon title="Happy Face" icon="HappyAlt" size={40} />
+  <Icon title="Happy Face" icon="HappyAlt" size={60} />
+</Playground>
+
+## Logo
+
+<Playground>
+  <Icon title="GitHub Icon" icon="Github" isLogo />
+  <Icon title="Google Icon" icon="Google" isLogo />
+  <Icon title="Linkedin Icon" icon="LinkedinSquare" isLogo />
+</Playground>
