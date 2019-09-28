@@ -22,3 +22,14 @@ export const fetchMyRoomsFailure = (error = null) => ({
         error
     },
 });
+
+export const startListener = () => ({
+   type: types.START_SOCKET,
+});
+
+export const updatedMyRooms = (room) => ({
+    type: 'UPDATED_MY_ROOMS',
+    params: {
+        room,
+    },
+});

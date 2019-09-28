@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { Avatar } from 'components';
-import { fetchMyRoomsRequest } from "redux-flow/reducers/room/actions";
+import { fetchMyRoomsRequest, startListener } from "redux-flow/reducers/room/actions";
 import { getAuthenticatedUser } from "redux-flow/reducers/auth/selectors";
 
 import { getAllMyRooms } from "redux-flow/reducers/room/selectors";
@@ -23,6 +23,7 @@ export default function Entry () {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchMyRoomsRequest());
+        dispatch(startListener());
     }, [dispatch]);
 
     const { user, myRooms } = useSelector(state => ({

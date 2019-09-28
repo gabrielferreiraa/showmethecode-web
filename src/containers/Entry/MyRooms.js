@@ -92,7 +92,7 @@ export default function MyRooms({ rooms }) {
                                 </div>
                                 <WrapperGuestsEntry>
                                     <Guests data={room.users} />
-                                    <EntryLink>
+                                    <EntryLink to="/">
                                         <Icon icon="LogInCircle" title={`Enter room "${room.code}"`} />
                                     </EntryLink>
                                 </WrapperGuestsEntry>

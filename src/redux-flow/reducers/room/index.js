@@ -21,5 +21,9 @@ export default handleActions({
         isFetching,
         error,
     }),
+    UPDATED_MY_ROOMS: (state, { params: { room } }) => ({
+        ...state,
+        myRooms: [...state.myRooms, room],
+    })
 }, initialState);
 
