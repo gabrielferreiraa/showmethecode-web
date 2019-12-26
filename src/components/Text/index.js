@@ -14,7 +14,7 @@ const Text = styled.p`
 `;
 
 Text.defaultProps = {
-    size: sizes.small,
+    size: 'small',
     align: 'left',
 };
 
