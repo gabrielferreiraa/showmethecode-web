@@ -1,0 +1,4 @@
+{
+    "extends": ["react-app", "plugin:sonarjs/recommended"],
+    "plugins": ["sonarjs"]
+}
