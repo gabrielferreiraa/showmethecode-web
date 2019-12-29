@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
-import global from 'config/global';
+import global from "config/global"
 
 const Title = styled.h2`
   font-family: ${global.font.regular};
@@ -9,14 +9,14 @@ const Title = styled.h2`
   font-weight: normal;
   font-size: 1.4em;
   text-align: ${({ align }) => align};
-`;
+`
 
 Title.defaultProps = {
-    align: 'left',
-};
+  align: "left",
+}
 
 Title.propTypes = {
-    align: PropTypes.oneOf(['left', 'right', 'center']),
-};
+  align: PropTypes.oneOf(["left", "right", "center"]),
+}
 
-export default Title;
+export default Title

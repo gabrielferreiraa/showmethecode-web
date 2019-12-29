@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import styled from "styled-components"
+import PropTypes from "prop-types"
 
-import global from 'config/global';
+import global from "config/global"
 
 const Avatar = styled.img`
   width: 100px;
@@ -9,15 +9,15 @@ const Avatar = styled.img`
   border-radius: 50%;
   object-fit: cover;
   border: 2px dashed ${global.colors.secondaryColor};
-`;
+`
 
 Avatar.defaultProps = {
-    alt: '',
-};
+  alt: "",
+}
 
 Avatar.propTypes = {
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string,
-};
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+}
 
-export default Avatar;
+export default Avatar

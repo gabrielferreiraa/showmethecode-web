@@ -2,10 +2,21 @@
   "extends": [
     "react-app",
     "plugin:sonarjs/recommended",
-    "plugin:prettier/airbnb"
+    "airbnb",
+    "prettier"
   ],
   "plugins": ["sonarjs", "prettier"],
   "rules": {
     "prettier/prettier": ["error"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "node_modules",
+          "src"
+        ]
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
-import React from 'react';
+import React from "react"
 
-const Code = () => <h2>code</h2>;
+const Code = () => <h2>code</h2>
 
-export default Code;
+export default Code

@@ -5,5 +5,6 @@
   "arrowParens": "avoid",
   "parser": "babel",
   "semi": false,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "trailingComma": "es5"
 }

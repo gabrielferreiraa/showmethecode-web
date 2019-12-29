@@ -1,84 +1,84 @@
-import React from "react";
-import io from "socket.io-client";
-import { Link } from "react-router-dom";
+import React from "react"
+import io from "socket.io-client"
+import { Link } from "react-router-dom"
 
-const endpoint = "http://localhost:9000";
+const endpoint = "http://localhost:9000"
 
-var socket = io(endpoint, {
+const socket = io(endpoint, {
   transports: ["websocket"],
-});
+})
 
 const App_ = () => {
-  const [roomsCount, setRoomsCount] = React.useState(0);
-  const [code, setCode] = React.useState("");
-  const [author, setAuthor] = React.useState("");
-  const [roomCode, setRoomCode] = React.useState("");
-  const [rooms, setRooms] = React.useState([]);
+  const [roomsCount, setRoomsCount] = React.useState(0)
+  const [code, setCode] = React.useState("")
+  const [author, setAuthor] = React.useState("")
+  const [roomCode, setRoomCode] = React.useState("")
+  const [rooms, setRooms] = React.useState([])
 
   React.useEffect(() => {
     socket.on("roomsUpdated", rooms => {
-      setRooms(rooms);
-    });
-  }, [rooms]);
+      setRooms(rooms)
+    })
+  }, [rooms])
 
   React.useEffect(() => {
     socket.on("roomsCountUpdated", count => {
-      setRoomsCount(count);
-    });
-  }, [roomsCount]);
+      setRoomsCount(count)
+    })
+  }, [roomsCount])
 
   React.useEffect(() => {
     socket.on("codeUpdated", code => {
-      setCode(code);
-    });
-  }, [code]);
+      setCode(code)
+    })
+  }, [code])
 
   React.useEffect(() => {
     socket.on("newRoom", data => {
-      console.log(data);
-    });
-  }, []);
+      console.log(data)
+    })
+  }, [])
 
   const changeCode = async code => {
-    setCode(code);
-    socket.emit("codeUpdated", code);
-  };
+    setCode(code)
+    socket.emit("codeUpdated", code)
+  }
 
   const enterRoom = async () => {
     const res = await fetch("http://localhost:9000/room", {
       method: "PATCH",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         user: author,
-        code: roomCode
-      })
-    });
+        code: roomCode,
+      }),
+    })
 
-    console.log(res);
-  };
+    console.log(res)
+  }
 
   const newRoom = async () => {
     const res = await fetch("http://localhost:9000/room", {
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        owner: author
-      })
-    });
+        owner: author,
+      }),
+    })
 
-    console.log(res);
-  };
+    console.log(res)
+  }
 
   return (
     <>
       <div>
-      <label htmlFor="user">user id: ({author})</label>
+        <label htmlFor="user">user id: ({author})</label>
         <input
           type="text"
           id="user"
@@ -122,7 +122,10 @@ const App_ = () => {
         <button onClick={newRoom}>create</button>
       </div>
       <div>
-        <h1>created rooms: {roomsCount}</h1>
+        <h1>
+          created rooms:
+          {roomsCount}
+        </h1>
       </div>
       <textarea
         value={code}
@@ -155,16 +158,15 @@ const App_ = () => {
                         room.users.map((user, index) => (
                           <li key={index}>{user.name}</li>
                         ))}
-
                     </ul>
                   </td>
                 </tr>
-              );
+              )
             })}
         </tbody>
       </table>
     </>
-  );
-};
+  )
+}
 
-export default App_;
+export default App_

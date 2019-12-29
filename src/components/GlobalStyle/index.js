@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
-import fontFace from './fonts';
-import global from 'config/global';
+import global from "config/global"
+import fontFace from "./fonts"
 
 export default createGlobalStyle`
   ${fontFace}
@@ -10,4 +10,4 @@ export default createGlobalStyle`
     font-size: 14px;
     font-family: ${global.font.regular}, sans-serif;
   }
-`;
+`

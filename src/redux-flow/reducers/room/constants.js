@@ -1,4 +1,4 @@
 export const USER_TYPE = {
-    guest: 'g',
-    owner: 'o',
-};
+  guest: "g",
+  owner: "o",
+}

@@ -1,22 +1,24 @@
-import { handleActions } from 'redux-actions';
-import types from './types';
+import { handleActions } from "redux-actions"
+import types from "./types"
 
 export const initialState = {
-    isFetching: false,
-};
+  isFetching: false,
+}
 
-export default handleActions({
+export default handleActions(
+  {
     [types.REQUEST]: (state, { payload: { isFetching } }) => ({
-        ...state,
-        isFetching,
+      ...state,
+      isFetching,
     }),
     [types.SUCCESS]: (state, { payload: { isFetching } }) => ({
-        ...state,
-        isFetching,
+      ...state,
+      isFetching,
     }),
     [types.FAILURE]: (state, { payload: { isFetching } }) => ({
-        ...state,
-        isFetching,
+      ...state,
+      isFetching,
     }),
-}, initialState);
-
+  },
+  initialState
+)

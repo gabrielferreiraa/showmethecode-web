@@ -1,1 +1,1 @@
-export const getUser = ({ user }) => user.data;
+export const getUser = ({ user }) => user.data

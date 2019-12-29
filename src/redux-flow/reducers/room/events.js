@@ -1,3 +1,3 @@
 export default {
-    NEW_ROOM: 'newRoom',
+  NEW_ROOM: "newRoom",
 }
