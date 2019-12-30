@@ -5,7 +5,7 @@ import { syncUserRequest } from "redux-flow/reducers/user/actions"
 import types from "./types"
 import { loginSuccess, loginFailure } from "./actions"
 
-export function* workerLoginRequest({ extra: { provider } }) {
+export function* workerLoginRequest({ meta: { provider } }) {
   try {
     const auth = firebase.auth()
     const signInProvider = () => auth.signInWithPopup(loginProviders[provider])

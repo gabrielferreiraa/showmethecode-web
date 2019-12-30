@@ -5,7 +5,7 @@ export const syncUserRequest = user => ({
   payload: {
     isFetching: true,
   },
-  extra: { user },
+  meta: { user },
 })
 
 export const syncUserSuccess = data => ({

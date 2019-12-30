@@ -18,7 +18,7 @@ describe("actions/user", () => {
       expect(actions.syncUserRequest(user)).to.be.deep.equal({
         type: "user/SYNC_REQUEST",
         payload: { isFetching: true },
-        extra: { user },
+        meta: { user },
       })
     })
   })

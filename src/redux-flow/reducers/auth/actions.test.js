@@ -1,6 +1,8 @@
 import { expect } from "chai"
 
 import * as actions from "./actions"
+import types from "./types"
+import { PROVIDERS } from "./constants"
 
 describe("actions/auth", () => {
   describe("loginRequest", () => {
@@ -9,14 +11,14 @@ describe("actions/auth", () => {
     })
 
     test("should be return a object", () => {
-      expect(actions.loginRequest("github")).to.be.a("object")
+      expect(actions.loginRequest(PROVIDERS.github)).to.be.a("object")
     })
 
     test("should be return a valid object", () => {
-      expect(actions.loginRequest("github")).to.be.deep.equal({
-        type: "auth/REQUEST",
+      expect(actions.loginRequest(PROVIDERS.github)).to.be.deep.equal({
+        type: types.REQUEST,
         payload: { isFetching: true },
-        extra: { provider: "github" },
+        meta: { provider: PROVIDERS.github },
       })
     })
   })
@@ -32,7 +34,7 @@ describe("actions/auth", () => {
 
     test("should be return a valid object", () => {
       expect(actions.loginSuccess()).to.be.deep.equal({
-        type: "auth/SUCCESS",
+        type: types.SUCCESS,
         payload: {
           isFetching: false,
         },
@@ -51,7 +53,7 @@ describe("actions/auth", () => {
 
     test("should be return a valid object", () => {
       expect(actions.loginFailure()).to.be.deep.equal({
-        type: "auth/FAILURE",
+        type: types.FAILURE,
         payload: {
           isFetching: false,
           error: null,

@@ -6,7 +6,7 @@ import { loginFailure } from "redux-flow/reducers/auth/actions"
 import types from "./types"
 import * as actions from "./actions"
 
-function* workerUserSyncRequest({ extra: { user } }) {
+function* workerUserSyncRequest({ meta: { user } }) {
   try {
     const { data } = yield call(api.upsertUser, user)
 

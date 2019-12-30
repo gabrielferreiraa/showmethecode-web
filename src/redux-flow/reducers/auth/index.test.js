@@ -1,6 +1,7 @@
 import { expect } from "chai"
 
-import authReducer, { initialState } from "./index"
+import authReducer, { initialState } from "."
+import types from "./types"
 
 describe("reducers/auth", () => {
   test("should be a function ", () => {
@@ -15,7 +16,7 @@ describe("reducers/auth", () => {
 
   test("should can handle auth/REQUEST", () => {
     const result = authReducer(undefined, {
-      type: "auth/REQUEST",
+      type: types.REQUEST,
       payload: { isFetching: true },
     })
 
@@ -27,7 +28,7 @@ describe("reducers/auth", () => {
 
   test("should can handle auth/SUCCESS", () => {
     const result = authReducer(undefined, {
-      type: "auth/SUCCESS",
+      type: types.SUCCESS,
       payload: {
         isFetching: false,
       },
@@ -41,7 +42,7 @@ describe("reducers/auth", () => {
 
   test("should can handle auth/FAILURE", () => {
     const result = authReducer(undefined, {
-      type: "auth/FAILURE",
+      type: types.FAILURE,
       payload: {
         isFetching: false,
         user: null,

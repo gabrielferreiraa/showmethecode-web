@@ -5,7 +5,7 @@ export const loginRequest = provider => ({
   payload: {
     isFetching: true,
   },
-  extra: { provider },
+  meta: { provider },
 })
 
 export const loginSuccess = () => ({

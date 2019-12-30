@@ -1,6 +1,7 @@
 import { expect } from "chai"
 
 import userReducer, { initialState } from "./index"
+import types from "./types"
 
 describe("reducers/user", () => {
   test("should be a function ", () => {
@@ -15,7 +16,7 @@ describe("reducers/user", () => {
 
   test("should can handle user/SYNC_REQUEST", () => {
     const result = userReducer(undefined, {
-      type: "user/SYNC_REQUEST",
+      type: types.SYNC_REQUEST,
       payload: { isFetching: true },
     })
 
@@ -27,7 +28,7 @@ describe("reducers/user", () => {
 
   test("should can handle user/SYNC_SUCCESS", () => {
     const result = userReducer(undefined, {
-      type: "user/SYNC_SUCCESS",
+      type: types.SYNC_SUCCESS,
       payload: {
         isFetching: false,
         data: [],
@@ -43,7 +44,7 @@ describe("reducers/user", () => {
 
   test("should can handle user/SYNC_FAILURE", () => {
     const result = userReducer(undefined, {
-      type: "user/SYNC_FAILURE",
+      type: types.SYNC_FAILURE,
       payload: {
         isFetching: false,
         error: null,
