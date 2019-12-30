@@ -31,7 +31,13 @@ export default function EnterRoom() {
         </Tooltip>
       </TitleWithIcon>
       <div>
-        <Input label="Room code" />
+        <Input
+          label="Room code"
+          id="room_code"
+          name="room_code"
+          value=""
+          onChange={() => {}}
+        />
         <Button onClick={() => {}}>enter</Button>
       </div>
     </div>

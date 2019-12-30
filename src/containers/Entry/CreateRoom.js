@@ -31,7 +31,13 @@ export default function EnterRoom() {
         </Tooltip>
       </TitleWithIcon>
       <div>
-        <Input label="Language" />
+        <Input
+          label="Language"
+          name="language"
+          id="language"
+          value=""
+          onChange={() => {}}
+        />
         <Button onClick={() => {}}>create</Button>
       </div>
     </div>
