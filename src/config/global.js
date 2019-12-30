@@ -1,8 +1,7 @@
+const reduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__
+
 export default {
-  devTools:
-    (window.__REDUX_DEVTOOLS_EXTENSION__ &&
-      window.__REDUX_DEVTOOLS_EXTENSION__()) ||
-    "",
+  devTools: (reduxDevTools && reduxDevTools()) || "",
   colors: {
     primaryColor: "#2ED096",
     secondaryColor: "#908F8F",

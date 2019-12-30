@@ -8,7 +8,10 @@
   "plugins": ["sonarjs", "prettier"],
   "rules": {
     "prettier/prettier": ["error"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-underscore-dangle": ["error", {
+        "allow": ["_id", "__REDUX_DEVTOOLS_EXTENSION__"]
+    }]
   },
   "settings": {
     "import/resolver": {
