@@ -15,11 +15,11 @@ describe("services/transformers", () => {
       expect(transformUserToSave).to.be.a("function")
     })
 
-    test("should be return a object", () => {
+    test("should return a object", () => {
       expect(transformUserToSave(user)).to.be.a("object")
     })
 
-    test("should be return a correct object", () => {
+    test("should return a correct object", () => {
       expect(transformUserToSave(user)).to.be.deep.equal({
         name: user.displayName,
         email: user.email,
