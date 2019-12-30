@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/gabrielferreiraa/showmethecode-web/tree/master.svg?style=svg)](https://circleci.com/gh/gabrielferreiraa/showmethecode-web/tree/master)
+
+[![Coverage Status](https://coveralls.io/repos/github/gabrielferreiraa/showmethecode-web/badge.svg?branch=master)](https://coveralls.io/github/gabrielferreiraa/showmethecode-web?branch=master)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

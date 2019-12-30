@@ -32,6 +32,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
     "docz": "2.3.0-alpha.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -48,7 +49,8 @@
     "test": "NODE_PATH=src react-scripts test",
     "test:cov": "yarn test --coverage",
     "eject": "react-scripts eject",
-    "docz": "NODE_PATH=src docz dev"
+    "docz": "NODE_PATH=src docz dev",
+    "coveralls": "yarn test --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "collectCoverageFrom": [
