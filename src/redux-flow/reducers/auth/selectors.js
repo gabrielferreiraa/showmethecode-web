@@ -2,7 +2,7 @@ import { createSelector } from "reselect"
 
 const getUser = ({ user }) => user.data
 
-export const getAuthenticatedUser = createSelector(
+const getAuthenticatedUser = createSelector(
   getUser,
   ({ name, email, avatar }) => ({
     name,
@@ -10,3 +10,6 @@ export const getAuthenticatedUser = createSelector(
     email,
   })
 )
+
+export { getAuthenticatedUser }
+export default getAuthenticatedUser

@@ -1,6 +1,6 @@
 export default {
-    themeConfig: {
-        showPlaygroundEditor: true
-    },
-    title: 'SMTC',
+  themeConfig: {
+    showPlaygroundEditor: true,
+  },
+  title: "SMTC",
 }

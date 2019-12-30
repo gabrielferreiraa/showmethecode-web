@@ -8,11 +8,11 @@ import types from "./types"
 import events from "./events"
 import * as actions from "./actions"
 
-export function newRoom(socket) {
+export function newRoom(io) {
   return eventChannel(emit => {
-    socket.on(events.NEW_ROOM, data => emit(data))
+    io.on(events.NEW_ROOM, data => emit(data))
 
-    return () => socket.close()
+    return () => io.close()
   })
 }
 

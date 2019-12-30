@@ -30,7 +30,7 @@ export default function Guests({ data }) {
     data.length > 0 && (
       <List>
         {data.map((guest, index) => (
-          <Item title={`${guest.name} (guest)`} key={guest._id + index}>
+          <Item title={`${guest.name} (guest)`} key={`guest-${guest._id}`}>
             <GuestAvatar src={guest.avatar} countSpace={index} />
           </Item>
         ))}

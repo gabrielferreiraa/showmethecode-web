@@ -95,7 +95,6 @@ export default function MyRooms({ rooms }) {
                       icon="LogInCircle"
                       title={`Enter room "${room.code}"`}
                     />
-                    />
                   </EntryLink>
                 </WrapperGuestsEntry>
               </Room>

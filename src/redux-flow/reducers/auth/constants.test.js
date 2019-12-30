@@ -1,7 +1,6 @@
 import { expect } from "chai"
 
 import { PROVIDERS } from "./constants"
-import { USER_TYPE } from "../room/constants"
 
 describe("constants/auth", () => {
   describe("PROVIDERS", () => {

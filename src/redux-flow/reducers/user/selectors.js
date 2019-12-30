@@ -1,1 +1,4 @@
-export const getUser = ({ user }) => user.data
+const getUser = ({ user }) => user.data
+
+export { getUser }
+export default getUser
