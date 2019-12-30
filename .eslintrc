@@ -13,6 +13,14 @@
         "allow": ["_id", "__REDUX_DEVTOOLS_EXTENSION__"]
     }]
   },
+  "overrides": [
+    {
+        "files": ["*.test.js","*.spec.js"],
+        "rules": {
+          "sonarjs/no-duplicate-string": "off"
+        }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "node": {
