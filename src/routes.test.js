@@ -6,6 +6,14 @@ import configureStore from "redux-mock-store"
 import { render } from "@testing-library/react"
 import Routes from "./routes"
 
+const user = {
+  data: {
+    name: "Gabriel",
+    email: "hi@gabrielferreira.dev",
+    avatar: "https://picture.com.br",
+  },
+}
+
 const mockStore = configureStore([])
 
 describe("src/routes", () => {
@@ -30,13 +38,7 @@ describe("src/routes", () => {
   test("<Entry /> rendering", () => {
     const store = mockStore({
       room: { myRooms: [] },
-      user: {
-        data: {
-          name: "Gabriel",
-          email: "hi@gabrielferreira.dev",
-          avatar: "https://picture.com.br",
-        },
-      },
+      user,
     })
     const history = createMemoryHistory()
 
@@ -54,15 +56,7 @@ describe("src/routes", () => {
   })
 
   test("<Code /> rendering", () => {
-    const store = mockStore({
-      user: {
-        data: {
-          name: "Gabriel",
-          email: "hi@gabrielferreira.dev",
-          avatar: "https://picture.com.br",
-        },
-      },
-    })
+    const store = mockStore({ user })
     const history = createMemoryHistory()
 
     const { container } = render(
