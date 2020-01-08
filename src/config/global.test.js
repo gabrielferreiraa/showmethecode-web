@@ -8,17 +8,7 @@ describe("config/global", () => {
   })
 
   test("should have 4 properties", () => {
-    expect(Object.keys(global)).to.have.lengthOf(4)
-  })
-
-  describe("devTools", () => {
-    test("should have property", () => {
-      expect(global).to.have.property("devTools")
-    })
-
-    test("property should return a string", () => {
-      expect(global.devTools).to.be.a("string")
-    })
+    expect(Object.keys(global)).to.have.lengthOf(3)
   })
 
   describe("colors", () => {
