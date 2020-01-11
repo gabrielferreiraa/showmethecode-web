@@ -13,7 +13,7 @@ export const history = createBrowserHistory()
 
 const sagaMiddleware = createSagaMiddleware()
 const persistConfig = {
-  key: "root",
+  key: "@showmethecode",
   storage,
 }
 
