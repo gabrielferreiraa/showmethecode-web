@@ -2,12 +2,12 @@ import "@testing-library/jest-dom/extend-expect"
 
 import React from "react"
 import { render } from "@testing-library/react"
-import Text from "."
+import Github from "./Github"
 
-describe("<Text />", () => {
+describe("<Github />", () => {
   test("should render", () => {
-    const text = "Lorem Ipsum"
-    const { getByText } = render(<Text>{text}</Text>)
+    const text = "Login with Github"
+    const { getByText } = render(<Github onClick={() => {}}>{text}</Github>)
 
     expect(getByText(text)).toBeInTheDocument()
   })

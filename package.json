@@ -2,9 +2,11 @@
   "name": "showmethecode-web",
   "version": "0.1.0",
   "private": true,
+  "description": "A amazing real time code sharer to you and your friends. So, give me the room code and SHOW ME THE CODE!",
   "dependencies": {
     "axios": "^0.19.0",
     "connected-react-router": "^6.6.1",
+    "docz": "2.3.0-alpha.6",
     "dotenv": "^8.2.0",
     "firebase": "^7.6.1",
     "history": "^4.10.1",
@@ -34,7 +36,6 @@
     "axios-mock-adapter": "^1.17.0",
     "chai": "^4.2.0",
     "coveralls": "^3.0.9",
-    "docz": "2.3.0-alpha.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
@@ -51,7 +52,7 @@
     "test": "NODE_PATH=src react-scripts test",
     "test:cov": "yarn test --coverage",
     "eject": "react-scripts eject",
-    "docz": "NODE_PATH=src docz dev",
+    "docz": "docz dev -p 4000",
     "coveralls": "yarn test --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {

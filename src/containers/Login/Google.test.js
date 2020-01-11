@@ -2,12 +2,12 @@ import "@testing-library/jest-dom/extend-expect"
 
 import React from "react"
 import { render } from "@testing-library/react"
-import Text from "."
+import Google from "./Google"
 
-describe("<Text />", () => {
+describe("<Google />", () => {
   test("should render", () => {
-    const text = "Lorem Ipsum"
-    const { getByText } = render(<Text>{text}</Text>)
+    const text = "Login with Google"
+    const { getByText } = render(<Google onClick={() => {}}>{text}</Google>)
 
     expect(getByText(text)).toBeInTheDocument()
   })
