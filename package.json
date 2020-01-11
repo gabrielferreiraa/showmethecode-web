@@ -48,7 +48,7 @@
   },
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_PATH=src react-scripts build",
     "test": "NODE_PATH=src react-scripts test",
     "test:cov": "yarn test --coverage",
     "eject": "react-scripts eject",
