@@ -31,7 +31,12 @@ export default function Guests({ data }) {
       <List>
         {data.map((guest, index) => (
           <Item title={`${guest.name} (guest)`} key={`guest-${guest._id}`}>
-            <GuestAvatar src={guest.avatar} countSpace={index} />
+            <GuestAvatar
+              src={guest.avatar}
+              alt={guest.name}
+              title={guest.name}
+              countSpace={index}
+            />
           </Item>
         ))}
       </List>

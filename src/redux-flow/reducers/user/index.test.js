@@ -1,6 +1,6 @@
 import { expect } from "chai"
 
-import userReducer, { initialState } from "./index"
+import userReducer, { initialState } from "."
 import types from "./types"
 
 describe("reducers/user", () => {

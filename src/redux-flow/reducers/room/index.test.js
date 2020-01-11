@@ -1,6 +1,6 @@
 import { expect } from "chai"
 
-import roomReducer, { initialState } from "./index"
+import roomReducer, { initialState } from "."
 import types from "./types"
 
 const myRooms = []

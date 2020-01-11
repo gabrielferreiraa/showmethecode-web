@@ -2,7 +2,7 @@ import "@testing-library/jest-dom/extend-expect"
 
 import React from "react"
 import { render } from "@testing-library/react"
-import Text from "./index"
+import Text from "."
 
 describe("<Text />", () => {
   test("should render", () => {

@@ -3,7 +3,7 @@ import "@testing-library/jest-dom/extend-expect"
 import React from "react"
 import { render } from "@testing-library/react"
 import { getByAltText } from "@testing-library/dom"
-import Avatar from "./index"
+import Avatar from "."
 
 describe("<Avatar />", () => {
   test("should render", () => {
