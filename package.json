@@ -2,6 +2,7 @@
   "name": "showmethecode-web",
   "version": "0.1.0",
   "private": true,
+  "description": "A amazing real time code sharer to you and your friends. So, give me the room code and SHOW ME THE CODE!",
   "dependencies": {
     "axios": "^0.19.0",
     "connected-react-router": "^6.6.1",
@@ -51,7 +52,7 @@
     "test": "NODE_PATH=src react-scripts test",
     "test:cov": "yarn test --coverage",
     "eject": "react-scripts eject",
-    "docz": "NODE_PATH=src docz dev",
+    "docz": "docz dev -p 4000",
     "coveralls": "yarn test --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {

@@ -1,8 +1,18 @@
+import * as path from "path"
+import pkg from "./package.json"
+
 export default {
+  title: "Show me the code",
+  description: pkg.description,
   themeConfig: {
     initialColorMode: "dark",
     showPlaygroundEditor: true,
   },
-  ignore: ["**/CODE_OF_CONDUCT.md", "**/README.md"],
-  title: "Show me the code",
+  onCreateWebpackConfig: ({ actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        modules: [path.resolve(__dirname, "../src"), "node_modules"],
+      },
+    })
+  },
 }
