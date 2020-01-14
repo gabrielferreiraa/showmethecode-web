@@ -47,9 +47,9 @@
     "redux-saga-test-plan": "^4.0.0-rc.1"
   },
   "scripts": {
-    "start": "NODE_PATH=src react-scripts start",
-    "build": "NODE_PATH=src react-scripts build",
-    "test": "NODE_PATH=src react-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "test:cov": "yarn test --coverage",
     "eject": "react-scripts eject",
     "docz": "docz dev -p 4000",
