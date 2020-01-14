@@ -55,7 +55,7 @@ describe("src/routes", () => {
     const container = renderContainer(store, history)
     history.push("/entry")
 
-    expect(container.innerHTML).toMatch(/Hi,Gabriel/)
+    expect(container.innerHTML).toMatch(/Hi, Gabriel/)
   })
 
   test("<Code /> rendering", () => {
