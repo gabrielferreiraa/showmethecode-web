@@ -38,10 +38,7 @@ export default function Entry() {
     <Row>
       <Col sm={12}>
         <StyledAvatar src={user.avatar} alt={user.name} />
-        <Welcome>
-          Hi,
-          {user.name}
-        </Welcome>
+        <Welcome>{`Hi, ${user.name}`}</Welcome>
       </Col>
       <Col sm={12}>
         <Row>

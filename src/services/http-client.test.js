@@ -41,17 +41,4 @@ describe("services/http-client", () => {
       )
     }
   })
-
-  test("should throw an error (without token)", async () => {
-    try {
-      mock.onPost(`${baseURL}/save-user`).reply(200)
-
-      await http({
-        method: "POST",
-        url: "/save-user",
-      })
-    } catch (err) {
-      expect(err.message).to.be.deep.equal("Token is required")
-    }
-  })
 })
