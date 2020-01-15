@@ -14,7 +14,7 @@ export default function Login() {
 
   return (
     <div>
-      <Logo src="images/show-me-the-code.png" alt="" title="" />
+      <Logo />
       <Text align="center">
         Real-time code sharing with private rooms to make your life and your
         friends easier. Talking is cheap, show me the code!
