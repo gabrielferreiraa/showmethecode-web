@@ -11,6 +11,14 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-underscore-dangle": ["error", {
         "allow": ["_id", "__REDUX_DEVTOOLS_EXTENSION__"]
+    }],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "never",
+        "functions": "never"
     }]
   },
   "overrides": [
