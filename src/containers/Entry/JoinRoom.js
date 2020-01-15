@@ -1,35 +1,15 @@
 import React from "react"
-import styled from "styled-components"
 
-import global from "config/global"
-import { Button, Title, Input, Tooltip, Icon } from "components"
-
-const TitleWithIcon = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  ${Title} {
-    margin-right: 10px;
-  }
-
-  svg {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    color: ${global.colors.darkColor};
-  }
-`
+import { Button, Input } from "components"
+import RoomSectionTitle from "./RoomSectionTitle"
 
 export default function JoinRoom() {
   return (
     <div>
-      <TitleWithIcon>
-        <Title>Join a room</Title>
-        <Tooltip content="Enter your friend's room number here to enter the same room">
-          <Icon icon="InfoCircle" />
-        </Tooltip>
-      </TitleWithIcon>
+      <RoomSectionTitle
+        title="Join a room"
+        tooltip="Enter your friend's room number here to enter the same room"
+      />
       <div>
         <Input
           label="Room code"
