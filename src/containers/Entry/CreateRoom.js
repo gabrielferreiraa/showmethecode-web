@@ -21,7 +21,7 @@ const TitleWithIcon = styled.div`
   }
 `
 
-export default function EnterRoom() {
+export default function CreateRoom() {
   return (
     <div>
       <TitleWithIcon>

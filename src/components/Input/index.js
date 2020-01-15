@@ -18,7 +18,7 @@ const Label = styled.label`
   display: block;
   font-family: ${global.font.regular};
   font-weight: normal;
-  color: ${global.colors.darkColor};
+  color: ${global.colors.secondaryColor};
   margin-bottom: 3px;
 `
 

@@ -9,6 +9,7 @@
   "rules": {
     "prettier/prettier": ["error"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": ["off"],
     "no-underscore-dangle": ["error", {
         "allow": ["_id", "__REDUX_DEVTOOLS_EXTENSION__"]
     }],
