@@ -1,0 +1,14 @@
+exclude_patterns:
+  - "src/serviceWorkers.js"
+  - "src/App_.js"
+  - "**/*.test.js"
+  - "**/*.spec.js"
+eslint:
+  enabled: true
+  config:
+    config: ./.eslintrc
+    extensions:
+        - .es6
+        - .js
+        - .jsx
+        - .mjs
