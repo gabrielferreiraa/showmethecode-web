@@ -25,7 +25,7 @@ export default function EnterRoom() {
   return (
     <div>
       <TitleWithIcon>
-        <Title align="right">Join a room</Title>
+        <Title>Join a room</Title>
         <Tooltip content="Enter your friend's room number here to enter the same room">
           <Icon icon="InfoCircle" />
         </Tooltip>
