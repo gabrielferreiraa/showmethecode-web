@@ -8,7 +8,17 @@ describe("config/global", () => {
   })
 
   test("should have 4 properties", () => {
-    expect(Object.keys(global)).to.have.lengthOf(3)
+    expect(Object.keys(global)).to.have.lengthOf(4)
+  })
+
+  describe("appName", () => {
+    test("should have property", () => {
+      expect(global).to.have.property("appName")
+    })
+
+    test("property should return a string", () => {
+      expect(global.appName).to.be.a("string")
+    })
   })
 
   describe("colors", () => {

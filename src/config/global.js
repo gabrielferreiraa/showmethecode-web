@@ -1,4 +1,5 @@
 export default {
+  appName: "Show me the code",
   colors: {
     primaryColor: "#2ED096",
     secondaryColor: "#908F8F",
