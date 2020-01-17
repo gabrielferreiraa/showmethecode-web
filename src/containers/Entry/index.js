@@ -13,9 +13,9 @@ import { getAuthenticatedUser } from "redux-flow/reducers/auth/selectors"
 import { getAllMyRooms } from "redux-flow/reducers/room/selectors"
 
 import Welcome from "./Welcome"
-import MyRooms from "./MyRooms"
+import YourRooms from "./YourRooms"
 import CreateRoom from "./CreateRoom"
-import EnterRoom from "./EnterRoom"
+import JoinRoom from "./JoinRoom"
 
 const StyledAvatar = styled(Avatar)`
   display: block;
@@ -43,10 +43,10 @@ export default function Entry() {
       <Col sm={12}>
         <Row>
           <Col sm={6}>
-            <MyRooms rooms={myRooms} />
+            <YourRooms rooms={myRooms} />
           </Col>
           <Col sm={6}>
-            <EnterRoom />
+            <JoinRoom />
             <CreateRoom />
           </Col>
         </Row>
