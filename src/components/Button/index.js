@@ -10,15 +10,15 @@ const StyledButton = styled.button`
   border-radius: ${global.layout.borderRadius};
   color: #fff;
   outline: none;
-  border: 1px solid ${global.colors.primaryColor};
+  border: 2px solid ${global.colors.primaryColor};
   cursor: pointer;
-  padding: 15px 30px;
+  padding: 0 30px;
   transition: background-color 200ms ease;
-  font-size: 1em;
+  font-size: 1.1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 50px;
 
   &:hover {
     background-color: ${darken(0.05, global.colors.primaryColor)};

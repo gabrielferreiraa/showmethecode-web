@@ -7,11 +7,12 @@ import global from "config/global"
 const StyledInput = styled.input`
   padding: 0 15px;
   border: 2px solid #e3e3e3;
-  border-radius: 5px;
+  border-radius: ${global.layout.borderRadius};
   outline: none;
   font-size: 1.1em;
-  height: 60px;
+  height: 50px;
   font-family: ${global.font.bold};
+  box-sizing: border-box;
 `
 
 const Label = styled.label`
