@@ -5,10 +5,13 @@ import styled from "styled-components"
 import global from "config/global"
 import { Title, Tooltip, Icon } from "components"
 
+const sides = ["left", "right"]
+
 const TitleWithIcon = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: ${({ side }) =>
+    side === "left" ? "flex-start" : "flex-end"};
 
   ${Title} {
     margin-right: 10px;
@@ -22,9 +25,9 @@ const TitleWithIcon = styled.div`
   }
 `
 
-export default function RoomSectionTitle({ title, tooltip }) {
+export default function RoomSectionTitle({ title, tooltip, side }) {
   return (
-    <TitleWithIcon>
+    <TitleWithIcon side={side}>
       <Title>{title}</Title>
       <Tooltip content={tooltip}>
         <Icon icon="InfoCircle" />
@@ -33,7 +36,12 @@ export default function RoomSectionTitle({ title, tooltip }) {
   )
 }
 
+RoomSectionTitle.defaultProps = {
+  side: "left",
+}
+
 RoomSectionTitle.propTypes = {
   title: PropTypes.string.isRequired,
   tooltip: PropTypes.string.isRequired,
+  side: PropTypes.oneOf(Object.values(sides)),
 }

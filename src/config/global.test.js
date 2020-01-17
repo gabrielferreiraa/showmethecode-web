@@ -119,8 +119,8 @@ describe("config/global", () => {
         expect(global.layout.borderRadius).to.be.a("string")
       })
 
-      test("property should return `5px`", () => {
-        expect(global.layout.borderRadius).to.be.equal("5px")
+      test("property should return `10px`", () => {
+        expect(global.layout.borderRadius).to.be.equal("10px")
       })
     })
   })

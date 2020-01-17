@@ -8,7 +8,7 @@ export default {
     google: "#4285F4",
   },
   layout: {
-    borderRadius: "5px",
+    borderRadius: "10px",
   },
   font: {
     thin: "Roboto-Thin",

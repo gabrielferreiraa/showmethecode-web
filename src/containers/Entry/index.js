@@ -14,8 +14,13 @@ import { getAllMyRooms } from "redux-flow/reducers/room/selectors"
 
 import Welcome from "./Welcome"
 import YourRooms from "./YourRooms"
-import CreateRoom from "./CreateRoom"
-import JoinRoom from "./JoinRoom"
+import {
+  JoinRoom as JoinRoomTitle,
+  CreateRoom as CreateRoomTitle,
+} from "./Titles"
+import CreateRoomForm from "./CreateRoomForm"
+import JoinRoomForm from "./JoinRoomForm"
+import SectionForm from "./SectionForm"
 
 const StyledAvatar = styled(Avatar)`
   display: block;
@@ -46,8 +51,14 @@ export default function Entry() {
             <YourRooms rooms={myRooms} />
           </Col>
           <Col sm={6}>
-            <JoinRoom />
-            <CreateRoom />
+            <SectionForm
+              titleComponent={<JoinRoomTitle />}
+              form={<JoinRoomForm />}
+            />
+            <SectionForm
+              titleComponent={<CreateRoomTitle />}
+              form={<CreateRoomForm />}
+            />
           </Col>
         </Row>
       </Col>
