@@ -58,6 +58,20 @@ describe("config/global", () => {
       })
     })
 
+    describe("tertiaryColor", () => {
+      test("should have a property", () => {
+        expect(global.colors).to.have.property("tertiaryColor")
+      })
+
+      test("property should return a string", () => {
+        expect(global.colors.tertiaryColor).to.be.a("string")
+      })
+
+      test("property should return `#E3E3E3`", () => {
+        expect(global.colors.tertiaryColor).to.be.equal("#E3E3E3")
+      })
+    })
+
     describe("darkColor", () => {
       test("should have a property", () => {
         expect(global.colors).to.have.property("secondaryColor")

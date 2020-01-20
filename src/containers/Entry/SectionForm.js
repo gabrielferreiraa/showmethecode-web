@@ -8,22 +8,11 @@ const StyledSectionForm = styled.div`
   }
 `
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: flex-end;
-
-  input {
-    margin-right: 5px;
-  }
-`
-
 export default function SectionForm({ titleComponent, form }) {
   return (
     <StyledSectionForm>
       {titleComponent}
-      <form>
-        <Wrapper>{form}</Wrapper>
-      </form>
+      <div>{form}</div>
     </StyledSectionForm>
   )
 }

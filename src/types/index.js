@@ -1,4 +1,12 @@
-import { arrayOf, shape, string } from "prop-types"
+import { arrayOf, shape, string, func } from "prop-types"
+
+export const formType = {
+  value: string,
+  name: string.isRequired,
+  id: string.isRequired,
+  handleChange: func.isRequired,
+  handleBlur: func.isRequired,
+}
 
 export const roomType = shape({
   code: string.isRequired,

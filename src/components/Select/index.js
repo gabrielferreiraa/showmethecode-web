@@ -3,9 +3,10 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 
 import global from "config/global"
+import { formType } from "types"
 import FormErrorMessage from "../FormErrorMessage"
 
-const StyledInput = styled.input`
+const StyledSelect = styled.select`
   padding: 0 15px;
   border: 2px solid ${global.colors.tertiaryColor};
   border-radius: ${global.layout.borderRadius};
@@ -15,8 +16,11 @@ const StyledInput = styled.input`
   font-family: ${global.font.bold};
   box-sizing: border-box;
   color: ${global.colors.tertiaryColor};
+  background-color: #fff;
   min-width: 200px;
   width: auto;
+  appearance: none;
+  position: relative;
 `
 
 const Label = styled.label`
@@ -27,7 +31,7 @@ const Label = styled.label`
   margin-bottom: 3px;
 `
 
-export default function Input({
+export default function Select({
   value,
   name,
   id,
@@ -35,6 +39,7 @@ export default function Input({
   label,
   handleChange,
   handleBlur,
+  options,
   ...rest
 }) {
   const hasError =
@@ -43,31 +48,35 @@ export default function Input({
   return (
     <div>
       {!!label && <Label htmlFor={id}>{label}</Label>}
-      <StyledInput
-        type={type}
-        value={value}
+      <StyledSelect
         name={name}
         id={id}
         onChange={handleChange}
         onBlur={handleBlur}
-      />
+      >
+        <option value="">Choice the language</option>
+        {options.length > 0 &&
+          options.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+      </StyledSelect>
       {hasError && <FormErrorMessage message={rest.errors[name]} />}
     </div>
   )
 }
 
-Input.defaultProps = {
-  value: "",
-  type: "text",
-  label: "",
+Select.defaultProps = {
+  options: [],
 }
 
-Input.propTypes = {
-  type: PropTypes.string,
-  label: PropTypes.string,
-  value: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
-  handleBlur: PropTypes.func.isRequired,
+Select.propTypes = {
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+    })
+  ),
+  ...formType,
 }

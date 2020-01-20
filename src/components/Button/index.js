@@ -33,7 +33,11 @@ export default function Button({ children, onClick, ...rest }) {
   )
 }
 
+Button.defaultProps = {
+  onClick: () => {},
+}
+
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 }
