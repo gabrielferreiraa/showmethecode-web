@@ -15021,10 +15021,10 @@ react-frame-component@^4.1.1:
   resolved "https://registry.yarnpkg.com/react-frame-component/-/react-frame-component-4.1.1.tgz#ea8f7c518ef6b5ad72146dd1f648752369826894"
   integrity sha512-NfJp90AvYA1R6+uSYafQ+n+UM2HjHqi4WGHeprVXa6quU9d8o6ZFRzQ36uemY82dlkZFzf2jigFx6E4UzNFajA==
 
-react-grid-system@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/react-grid-system/-/react-grid-system-6.1.0.tgz#ae05cb6271d244950093558e8d355b2395a0716b"
-  integrity sha512-/hJGEa3L5iZr0FPjay83i6eISy8Zj2uQWFiFBAdz3rpvMDu4Vgrq5UYQiEdkNNYr88ZjuJ9I4Wvbv69/pITO5g==
+react-grid-system@6.4.2:
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/react-grid-system/-/react-grid-system-6.4.2.tgz#3caea1feb3daa10306fb2a6ff3e3ff83ba352676"
+  integrity sha512-zQxczLIAUyFfXJOySQlQEptwZj65hxyoEvS+siTupFW76a3AKUhqrhMJ90xKDcSCF9jb9D71zjoPw13Xe1+EKA==
   dependencies:
     prop-types "^15.7.2"
 
