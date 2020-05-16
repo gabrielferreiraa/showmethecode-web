@@ -6,7 +6,8 @@
       "REACT_APP_FIREBASE_API_KEY": "@react_app_firebase_api_key",
       "REACT_APP_FIREBASE_AUTH_DOMAIN": "@react_app_firebase_auth_domain",
       "REACT_APP_SOCKET_HOST": "@react_app_socket_host",
-      "REACT_APP_API_HOST": "@react_app_api_host"
+      "REACT_APP_API_HOST": "@react_app_api_host",
+      "SKIP_PREFLIGHT_CHECK": "@skip_preflight_check"
     }
   }
 }
