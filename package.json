@@ -10,7 +10,7 @@
     "dotenv": "8.2.0",
     "firebase": "7.14.4",
     "history": "4.10.1",
-    "polished": "3.4.4",
+    "polished": "3.6.3",
     "prettier": "1.19.1",
     "prop-types": "15.7.2",
     "react": "16.13.0",
