@@ -1,6 +1,7 @@
 {
   "extends": [
-    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:sonarjs/recommended",
     "airbnb",
     "prettier"
@@ -27,6 +28,9 @@
         "files": ["*.test.js","*.spec.js"],
         "rules": {
           "sonarjs/no-duplicate-string": "off"
+        },
+        "env": {
+          "jest": true
         }
     }
   ],
