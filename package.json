@@ -31,8 +31,8 @@
     "styled-icons": "10.2.1"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx-self": "7.9.0",
-    "@babel/plugin-transform-react-jsx-source": "7.10.0",
+    "@babel/plugin-transform-react-jsx-self": "7.10.1",
+    "@babel/plugin-transform-react-jsx-source": "7.10.1",
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@testing-library/dom": "7.5.9",
