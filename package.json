@@ -4,7 +4,7 @@
   "private": true,
   "description": "A amazing real time code sharer to you and your friends. So, give me the room code and SHOW ME THE CODE!",
   "dependencies": {
-    "axios": "0.19.2",
+    "axios": "0.21.1",
     "connected-react-router": "6.7.0",
     "docz": "2.3.1",
     "dotenv": "8.2.0",
